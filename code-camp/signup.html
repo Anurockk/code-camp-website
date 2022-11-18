@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/login.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+</head>
+<body>
+<main>
+		
+<div class="center">
+<form method="post" action="php\signup.php">
+  <div class="container">
+    <h1>CREATE ACCOUNT</h1>
+    
+    <hr>
+<label for="name"><b>NAME</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" class="forminput"
+	required>
+	
+	<label for="username"><b>USERNAME</b></label>
+    <input type="text" placeholder="Enter a Unique Username" name="username" id="username" class="forminput"required>
+	
+	<label for="age"><b>AGE</b></label>
+    <input type="text"  placeholder="Enter Age" name="age" id="age" class="forminput" required></br>
+	
+    <label for="email"><b>EMAIL</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" class="forminput" required>
+	
+	<label for="mobile-number"><b>MOBILE NUMBER</b></label>
+    <input type="text" placeholder="Enter Mobile Number" name="mobile_number" id="mobile-number" class="forminput" required>
+	
+	
+	<b>GENDER</b>
+	<label for="male">
+    <input type="radio" name="gender" value="male" id="male" required> 
+	<b>MALE</b></label>
+	
+	<label for="female">
+    <input type="radio" name="gender" value="female" id="female" required>
+     <b>FEMALE</b></label></br></br>
+	
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" class="forminput" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="repeat_password"  id="password" class="forminput" required>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+     
+      <input type="submit" value="CREATE" class="signupbtn" >
+      <p class="forgotpaswd">Existing user  <a href="login.html">Login  </a>  or  <a href="delete.html">Delete Account</a></p>
+	  
+	  
+	   
+    </div>
+  </div>
+
+</form>
+</div>
+
+<script src="javascript\signup&login.js"></script>
+    </body>
+</html>

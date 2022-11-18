@@ -1,0 +1,75 @@
+<?php
+$host = "localhost";  
+$user = "root";  
+$password = '';  
+$db_name = "codecamp";  
+$db_table = "signup"; 
+   
+session_start();
+    $message="";
+   
+      
+    $con = mysqli_connect($host, $user, $password, $db_name);  
+    if(mysqli_connect_errno()) {  
+        die("Failed to connect with MySQL: ". mysqli_connect_error());  
+    }  
+        $result = mysqli_query($con,"SELECT * FROM signup WHERE username='" . $_POST["username"] . "' and password = '". $_POST["password"]."'");
+        $row  = mysqli_fetch_array($result);
+        if(is_array($row)) {
+        $_SESSION["id"] = $row['id'];
+        $_SESSION["name"] = $row['name'];
+        } else {
+         $message = "Invalid Username or Password!";
+        }
+    }
+    if(isset($_SESSION["id"])) {
+    header("Location:home.html");
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css\login.css" />
+  
+    <title>
+	
+	</title>
+
+  </head>
+  
+    <body>
+
+
+<main>
+	
+	
+<div class="center">
+<form action="php\login.php" method="post">
+  <div class="container">
+    <h1>LOGIN</h1>
+   
+    <hr>
+	
+	<label for="username"><b>USERNAME</b></label>
+    <input type="text" placeholder="Enter Your Username" name="username" id="username" class="forminput" required>
+	
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" class="forminput" required>
+
+    <div class="clearfix">
+      <input type="submit" class="loginbtn" value="LOGIN">
+      <p class="forgotpa">New user? <a href="signup.html">Signup  </a> or <a href="forgotpassword.html">forgot Password</a></p>
+      <p class="forgotpa"><a href="home.html">HOME  </a></p>
+	 
+    </div>
+  </div>
+</form>
+</div>
+  
+	 
+<script src="javascript\signup&login.js"></script>
+    </body>
+</html>

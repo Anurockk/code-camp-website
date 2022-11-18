@@ -1,0 +1,353 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family:Arial, 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color:#cac6c6;
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  
+}
+
+  
+.logo {
+  min-width:10%;
+  height:50px;
+  float: left;
+}
+.top {
+  margin:0 auto;
+  text-align: center;
+  width:100%;
+  height:50px;
+  background-color:#f1f1f1;
+}
+.searchbar {
+  min-width:20%;
+  max-width:25%;
+justify-content: space-evenly;
+padding: 11px;
+margin-top: 4px;
+border-radius:12px 0 12px 0;
+}
+
+.srchbtn {
+  width:40px;
+  height:40px;
+  margin-left:-5px;
+   border: none;
+  cursor: pointer;
+}
+.dropbtn {
+  background-color: #04AA;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #04AA;
+  
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.dropbtn1 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdownsearch {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownsearch a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+  .topnav {
+    overflow: hidden;
+    background-color:rgb(18,19,38);
+    width: 100%;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+    float:right;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+	  
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon  {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: width 2s ;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+      
+    }
+    .topnav.responsive a:hover {
+     background-color: rgb(18,19,38);
+     color:#ddd;
+     opacity:0.9;
+    }
+  }
+  
+  
+/* it will manage the width of the centeral or main content  */
+
+
+.center {
+	width:justify-content;
+	margin:0 auto;
+	background-color:white;
+	padding:10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	background-color:white;
+	color:black;
+}
+
+
+@media (min-width: 600px) {
+  .center {
+    max-width: 100%;
+	 margin-top:60px;
+  margin-bottom:60px;
+  }
+}
+
+@media (min-width: 600px) {
+  .center {
+    max-width: 40%;
+  }
+}
+
+.forminput {
+	 width: 92%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display:block;
+  border: none;
+  background: #f1f1f1;
+}	
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for login button */
+.loginbtn  {
+  background-color: rgb(18,19,38);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 93%;
+  opacity: 0.9;
+}
+
+.loginbtn:hover  {
+  opacity:1;
+}
+
+.signupbtn  {
+  background-color: rgb(18,19,38);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 93%;
+  opacity: 0.9;
+}
+
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  width:80%;
+  margin: 0 auto;
+  border:none;
+  background-color:white;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.forgotpaswd {
+	text-align:right;
+	text-decoration:none;
+	margin-top:8px;
+	
+}
+
+.forgotpaswd a {
+	text-decoration:none;
+	color:dogerblue;
+}
+.forgotpaswd a:hover {
+	color:dogerblue;
+	opacity:1;
+}
+
+.signupbtn a{
+	text-decoration:none;
+	color:white;
+}
+
+	/*manages footer*/
+	footer {
+	text-align:center;
+	background-color: rgb(18,19,38);
+    width:100%;
+    height:justify-content;
+	color:white;
+	font-size:1.2rem;
+	padding:10px 0 10px 0;
+	}
+	footer p a {
+	text-decoration:none;
+	color:white;
+	}
+	footer p a:hover {
+	color:red;
+	background-color;#f5f6f7;
+	}
+	
+	
+@media screen and (max-width: 600px) {
+    footer  {
+      float: right;
+      display: block;
+	  width:100%;
+    }
+  }
